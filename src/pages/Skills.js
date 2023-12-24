@@ -1,6 +1,5 @@
 import { CalculatorStyle } from "../styles/CalculatorStyle";
 import Contact from "./Contact";
-import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { MathJax } from "better-react-mathjax";
