@@ -40,11 +40,11 @@ function NavItems({
         Home
       </Link>
       <Link
-        to="/skills"
-        className={activeTab === "tab-skills" ? "active" : ""}
-        onClick={() => handleTabClick("tab-skills")}
+        to="/calculator"
+        className={activeTab === "tab-calculator" ? "active" : ""}
+        onClick={() => handleTabClick("tab-calculator")}
       >
-        Skills
+        Kalkulator
       </Link>
       <Link
         to="/portfolio-slider"

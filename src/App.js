@@ -4,11 +4,11 @@ import Home from "./pages/Home";
 import NavMain from "./components/navbar/NavMain";
 import { ContactModalProvider } from "./contexts/ContactModalContext";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Skills from "./pages/Skills";
 import About from "./pages/About";
 import PortfolioSlider from "./pages/PortfolioSlider";
 import { useState } from "react";
 import { MathJaxContext } from "better-react-mathjax";
+import CalculatorPage from "./pages/CalculatorPage"
 
 function App() {
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -44,9 +44,9 @@ function App() {
                   }
                 />
                 <Route
-                  path="/skills"
+                  path="/calculator"
                   element={
-                    <Skills
+                    <CalculatorPage
                       isContactOpen={isContactOpen}
                       setIsContactOpen={setIsContactOpen}
                     />

@@ -6,7 +6,7 @@ import { MathJax } from "better-react-mathjax";
 import Calculator from "../components/Calculator";
 import ValueSelection from "../assets/constantValuesSelection.png";
 
-export default function Skills(props) {
+export default function CalculatorPage(props) {
   useEffect(() => {
     if (props.isContactOpen) {
       document.querySelector("html").style.overflow = "hidden";
