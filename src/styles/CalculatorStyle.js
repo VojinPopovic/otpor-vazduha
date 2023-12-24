@@ -10,49 +10,57 @@ const CalculatorStyle = styled.div`
     margin-top: 20px;
     color: white;
     display: flex;
+    align-items: center;
     gap: 8px;
   }
   & .content-centering-container {
     max-width: 900px;
     height: auto;
     margin: 0 auto;
-    @media (max-width: 750px) {
-      height: 650px;
-      flex-direction: column;
-    }
-    & .grid-centering-container {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      flex-direction: column;
-      & p {
-        color: white;
-        width: 100%;
-        font-size: 30px;
-        padding: 20px 0;
-        margin-bottom: 10px;
-        display: flex;
-        gap: 12px;
-        & .my-span {
-          color: #da3636;
-        }
-      }
-      & .half,
-      .result {
-        font-size: x-large;
-        margin-bottom: 0;
-        color: white;
-        width: 20px;
-        @media (max-width: 750px) {
-          padding: 0;
-        }
+  }
+  @media (max-width: 750px) {
+    height: 650px;
+    flex-direction: column;
+  }
+  & .grid-centering-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    & .sub-header-paragraph {
+      color: white;
+      margin-bottom: 20px;
+      font-size: 20px;
+      & .my-span {
+        color: #da3636;
       }
     }
     & .calculate-button {
       @media (max-width: 750px) {
         bottom: 0;
       }
+    }
+  }
+  & .header-paragraph {
+    color: white;
+    width: 100%;
+    font-size: 30px;
+    padding: 20px 0;
+    margin-bottom: 10px;
+    display: flex;
+    gap: 12px;
+    & .my-span {
+      color: #da3636;
+    }
+  }
+  & .half,
+  .result {
+    font-size: x-large;
+    margin-bottom: 0;
+    color: white;
+    width: 20px;
+    @media (max-width: 750px) {
+      padding: 0;
     }
   }
 `;
@@ -149,7 +157,7 @@ const CalculatorOtpora = styled.div`
     & button {
       padding: 10px 20px;
       position: absolute;
-      bottom: 0;
+      bottom: 20px;
       color: white;
     }
   }
