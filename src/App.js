@@ -8,70 +8,73 @@ import Skills from "./pages/Skills";
 import About from "./pages/About";
 import PortfolioSlider from "./pages/PortfolioSlider";
 import { useState } from "react";
+import { MathJaxContext } from "better-react-mathjax";
 
 function App() {
   const [isContactOpen, setIsContactOpen] = useState(false);
 
   return (
     <>
-      <GlobalStyles></GlobalStyles>
-      <ContactModalProvider>
-        <MainDiv className="main-container">
-          <BrowserRouter>
-            <NavMain
-              isContactOpen={isContactOpen}
-              setIsContactOpen={setIsContactOpen}
-            ></NavMain>
-            <Routes>
-              <Route
-                path="/home"
-                element={
-                  <Home
-                    isContactOpen={isContactOpen}
-                    setIsContactOpen={setIsContactOpen}
-                  />
-                }
-              />
-              <Route
-                path="/"
-                element={
-                  <Home
-                    isContactOpen={isContactOpen}
-                    setIsContactOpen={setIsContactOpen}
-                  />
-                }
-              />
-              <Route
-                path="/skills"
-                element={
-                  <Skills
-                    isContactOpen={isContactOpen}
-                    setIsContactOpen={setIsContactOpen}
-                  />
-                }
-              />
-              <Route
-                path="/about"
-                element={
-                  <About
-                    setIsContactOpen={setIsContactOpen}
-                    isContactOpen={isContactOpen}
-                  />
-                }
-              />
-              <Route
-                path="/portfolio-slider"
-                element={
-                  <PortfolioSlider
-                    setIsContactOpen={setIsContactOpen}
-                    isContactOpen={isContactOpen}
-                  />
-                }
-              />
-            </Routes>
-          </BrowserRouter>
-        </MainDiv>
-      </ContactModalProvider>
+      <MathJaxContext>
+        <GlobalStyles></GlobalStyles>
+        <ContactModalProvider>
+          <MainDiv className="main-container">
+            <BrowserRouter>
+              <NavMain
+                isContactOpen={isContactOpen}
+                setIsContactOpen={setIsContactOpen}
+              ></NavMain>
+              <Routes>
+                <Route
+                  path="/home"
+                  element={
+                    <Home
+                      isContactOpen={isContactOpen}
+                      setIsContactOpen={setIsContactOpen}
+                    />
+                  }
+                />
+                <Route
+                  path="/"
+                  element={
+                    <Home
+                      isContactOpen={isContactOpen}
+                      setIsContactOpen={setIsContactOpen}
+                    />
+                  }
+                />
+                <Route
+                  path="/skills"
+                  element={
+                    <Skills
+                      isContactOpen={isContactOpen}
+                      setIsContactOpen={setIsContactOpen}
+                    />
+                  }
+                />
+                <Route
+                  path="/about"
+                  element={
+                    <About
+                      setIsContactOpen={setIsContactOpen}
+                      isContactOpen={isContactOpen}
+                    />
+                  }
+                />
+                <Route
+                  path="/portfolio-slider"
+                  element={
+                    <PortfolioSlider
+                      setIsContactOpen={setIsContactOpen}
+                      isContactOpen={isContactOpen}
+                    />
+                  }
+                />
+              </Routes>
+            </BrowserRouter>
+          </MainDiv>
+        </ContactModalProvider>
+      </MathJaxContext>
     </>
   );
 }

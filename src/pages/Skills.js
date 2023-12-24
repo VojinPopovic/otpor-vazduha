@@ -1,22 +1,12 @@
-import { SkillsStyled } from "../styles/SkillsStyle";
-import JavascriptItem from "../assets/skills-items/javascriptItem.svg";
-import TypescriptItem from "../assets/skills-items/typescriptItem.svg";
-import ReactItem from "../assets/skills-items/reactItem.svg";
-import NextjsItem from "../assets/skills-items/nextjsItem.svg";
-import CssItem from "../assets/skills-items/cssItem.svg";
-import TailwindItem from "../assets/skills-items/tailwindItem.svg";
-import StyledComponentsItem from "../assets/skills-items/styledComponentsItem.svg";
-import BootstrapItem from "../assets/skills-items/bootstrapItem.svg";
-import HTMLItem from "../assets/skills-items/htmlItem.svg";
-import MongoItem from "../assets/skills-items/mongodbItem.svg";
-import SQLItem from "../assets/skills-items/sqlItem.svg";
+import { CalculatorStyle } from "../styles/CalculatorStyle";
 import Contact from "./Contact";
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
+import { CalculatorOtpora } from "../styles/CalculatorStyle";
+import { MathJax } from "better-react-mathjax";
 
 export default function Skills(props) {
-
   useEffect(() => {
     if (props.isContactOpen) {
       document.querySelector("html").style.overflow = "hidden";
@@ -34,50 +24,63 @@ export default function Skills(props) {
         transition={{ duration: 0.6, ease: "easeInOut" }}
         exit={{ opacity: 1 }}
       >
-        <SkillsStyled>
+        <CalculatorStyle>
           <div className="content-centering-container">
             <div className="grid-centering-container">
               <p className="skills-paragraph">
-                <span className="my-span">My</span> skills
+                <span className="my-span">Kalkulator</span> otpora
               </p>
-              <div className="skill-items">
-                <Tilt>
-                  <img src={JavascriptItem} alt="" />
-                </Tilt>
-                <Tilt>
-                  <img src={TypescriptItem} className="tilt" alt="" />
-                </Tilt>
-                <Tilt>
-                  <img src={ReactItem} className="double-tilt" alt="" />
-                </Tilt>
-                <Tilt>
-                  <img src={NextjsItem} alt="" />
-                </Tilt>
-                <Tilt>
-                  <img src={CssItem} className="tilt" alt="" />
-                </Tilt>
-                <Tilt>
-                  <img src={TailwindItem} className="double-tilt" alt="" />
-                </Tilt>
-                <Tilt>
-                  <img src={StyledComponentsItem} alt="" />
-                </Tilt>
-                <Tilt>
-                  <img src={BootstrapItem} className="tilt" alt="" />
-                </Tilt>
-                <Tilt>
-                  <img src={HTMLItem} className="double-tilt" alt="" />
-                </Tilt>
-                <Tilt>
-                  <img src={MongoItem} alt="" />
-                </Tilt>
-                <Tilt>
-                  <img src={SQLItem} className="tilt" alt="" />
-                </Tilt>
-              </div>
+              <CalculatorOtpora>
+                <form>
+                  <div class="group">
+                    <input type="number" required="required" />
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>
+                      <MathJax>{"\\(C_w\\)"}</MathJax>
+                    </label>
+                  </div>
+                  <div className="multiply">X</div>
+                  <div class="group">
+                    <input type="number" required="required" />
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>
+                      <MathJax>{"\\(A\\)"}</MathJax>
+                    </label>
+                  </div>
+                  <div className="multiply">X</div>
+                  <div class="group">
+                    <input type="number" required="required" />
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>
+                      <MathJax>{"\\(\\rho\\)"}</MathJax>
+                    </label>
+                  </div>
+                  <div className="multiply">X</div>
+                  <div class="group">
+                    <input type="number" required="required" />
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>
+                      <MathJax>{"\\(\V^2\\)"}</MathJax>
+                    </label>
+                  </div>
+                  <div className="multiply">=</div>
+                  <div class="btn-box">
+                    <button class="btn btn-submit" type="submit">
+                      submit
+                    </button>
+                    <button class="btn btn-cancel" type="button">
+                      cancel
+                    </button>
+                  </div>
+                </form>
+              </CalculatorOtpora>
             </div>
           </div>
-        </SkillsStyled>
+        </CalculatorStyle>
         <Contact
           setIsContactOpen={props.setIsContactOpen}
           isContactOpen={props.isContactOpen}
