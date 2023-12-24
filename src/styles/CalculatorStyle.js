@@ -6,30 +6,52 @@ const CalculatorStyle = styled.div`
   padding: 100px 20px;
   z-index: -10;
   position: relative;
+  & .value-description {
+    margin-top: 20px;
+    color: white;
+    display: flex;
+    gap: 8px;
+  }
   & .content-centering-container {
     max-width: 900px;
     height: auto;
     margin: 0 auto;
+    @media (max-width: 750px) {
+      height: 650px;
+      flex-direction: column;
+    }
     & .grid-centering-container {
       width: 100%;
       display: flex;
       align-items: center;
+      justify-content: flex-start;
       flex-direction: column;
       & p {
         color: white;
-        width: 900px;
-        font-size: 40px;
+        width: 100%;
+        font-size: 30px;
         padding: 20px 0;
-        margin-bottom: 20px;
-        @media (max-width: 1000px) {
-          width: 575px;
-        }
-        @media (max-width: 600px) {
-          width: 250px;
-        }
-        & span {
+        margin-bottom: 10px;
+        display: flex;
+        gap: 12px;
+        & .my-span {
           color: #da3636;
         }
+      }
+      & .half,
+      .result {
+        font-size: x-large;
+        margin-bottom: 0;
+        color: white;
+        width: 20px;
+        @media (max-width: 750px) {
+          padding: 0;
+        }
+      }
+    }
+    & .calculate-button {
+      @media (max-width: 750px) {
+        bottom: 0;
       }
     }
   }
@@ -37,16 +59,25 @@ const CalculatorStyle = styled.div`
 
 const CalculatorOtpora = styled.div`
   width: 100%;
-  height: 100px;
+  height: 130px;
+  position: relative;
+  @media (max-width: 750px) {
+    height: 500px;
+    flex-direction: column;
+  }
   & form {
     width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    max-height: 100px;
     gap: 20px;
     .multiply {
       color: white;
+    }
+    @media (max-width: 750px) {
+      height: 700px;
+      flex-direction: column;
+      gap: 10px;
+      align-items: flex-start;
     }
     .group {
       position: relative;
@@ -57,22 +88,19 @@ const CalculatorOtpora = styled.div`
     input,
     textarea {
       background: none;
-      color: #c6c6c6;
+      color: white;
       font-size: 18px;
       padding: 10px 10px 10px 5px;
       display: block;
       width: 100px;
       border: none;
       border-radius: 0;
-      border-bottom: 1px solid #c6c6c6;
+      border-bottom: 1px solid white;
     }
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
       -webkit-appearance: none;
       margin: 0;
-    }
-    input[type="number"] {
-      -moz-appearance: textfield;
     }
     input:focus,
     textarea:focus {
@@ -117,6 +145,12 @@ const CalculatorOtpora = styled.div`
       background: #da3636;
       transition: 300ms ease all;
       left: 0%;
+    }
+    & button {
+      padding: 10px 20px;
+      position: absolute;
+      bottom: 0;
+      color: white;
     }
   }
 `;
