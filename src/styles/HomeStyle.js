@@ -56,14 +56,14 @@ const HomeCenteringDiv = styled.div`
     justify-content: center;
     font-size: 25px;
     color: white;
-    & .hi-im-vojin-paragraph {
+    & .otpor-vazduha-paragraph {
       letter-spacing: -5px;
-      font-size: clamp(3.5rem, 8vw, 5rem);
+      font-size: clamp(3.0rem, 8vw, 5rem);
       line-height: 0.8;
       white-space: nowrap;
     }
-    & .a-frontend-paragraph {
-      font-size: clamp(2rem, 6vw, 4rem);
+    & .sila-izdizanja-paragraph {
+      font-size: clamp(2rem, 4vw, 4rem);
       white-space: nowrap;
       letter-spacing: -2px;
     }

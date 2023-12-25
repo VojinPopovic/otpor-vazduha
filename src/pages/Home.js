@@ -1,6 +1,6 @@
 import { HomeStyle } from "../styles/HomeStyle";
 import { HomeCenteringDiv } from "../styles/HomeStyle";
-import BackgroundImage from "../assets/BackgroundImage.png";
+import BackgroundImage from "../assets/BackgroundImage.jpeg";
 import MainSectionGraphic from "../assets/MainSectionGraphic.svg";
 import { ReactComponent as ArrowDownGraphic } from "../assets/ArrowDownGraphic.svg";
 import Contact from "./Contact";
@@ -36,21 +36,22 @@ function Home(props) {
           <div className="dark-overlay"></div>
           <HomeCenteringDiv className="home-centering-container">
             <div className="me-text">
-              <p className="hi-im-vojin-paragraph">
-                Hi, i'm <span className="accent-span">Vojin</span>
+              <p className="otpor-vazduha-paragraph">
+                <span className="accent-span">Otpor</span> vazduha
               </p>
-              <p className="a-frontend-paragraph">
-                A <span className="accent-span">frontend</span> developer
+              <p className="sila-izdizanja-paragraph">
+                I aerodinamicke<span className="accent-span"> sile </span>
+                izdizanja
               </p>
               <div className="home-buttons">
                 <div
                   className="get-in-touch-button pill-button"
                   onClick={openModal}
                 >
-                  Get in touch
+                  Kontakt
                 </div>
                 <a href="#portfolio">
-                  <div className="my-work pill-button">My work</div>
+                  <div className="my-work pill-button">Prezentacija</div>
                 </a>
               </div>
             </div>
