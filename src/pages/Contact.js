@@ -52,10 +52,10 @@ function Contact(props) {
                     e.preventDefault();
                   }}
                 >
-                  Close
+                  Zatvori
                 </button>
                 <button type="submit" className="pill-button">
-                  Submit
+                  Posalji
                 </button>
               </div>
             </form>
