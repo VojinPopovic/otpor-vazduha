@@ -4,7 +4,7 @@ import BackgroundImage from "../assets/BackgroundImage.jpeg";
 import MainSectionGraphic from "../assets/MainSectionGraphic.svg";
 import { ReactComponent as ArrowDownGraphic } from "../assets/ArrowDownGraphic.svg";
 import Contact from "./Contact";
-import Portfolio from "./Portfolio";
+import Prezentacija from "./Prezentacija";
 import FooterMain from "../components/footer/FooterMain";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
@@ -67,7 +67,7 @@ function Home(props) {
             <ArrowDownGraphic className="arrow-down"></ArrowDownGraphic>
           </a>
         </HomeStyle>
-        <Portfolio></Portfolio>
+        <Prezentacija></Prezentacija>
         <FooterMain></FooterMain>
         <Contact
           setIsContactOpen={props.setIsContactOpen}

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const PortfolioItemDescriptionStyle = styled.div`
+const PrezentacijaItemDescriptionStyle = styled.div`
   width: 40%;
   height: 60%;
   background-color: #da3636;
@@ -74,4 +74,4 @@ const PortfolioItemDescriptionStyle = styled.div`
   }
 `;
 
-export { PortfolioItemDescriptionStyle };
+export { PrezentacijaItemDescriptionStyle };

@@ -1,6 +1,6 @@
 import { PrezentacijaStyle } from "../styles/PrezentacijaStyle";
-import PortfolioItemDescription from "../components/Portfolio/PortfolioItemDescription";
-import PortfolioPicture from "../components/Portfolio/PortfolioPicture";
+import PrezentacijaItemDescription from "../components/Prezentacija/PrezentacijaItemDescription";
+import PrezentacijaPicture from "../components/Prezentacija/PrezentacijaPicture";
 import SlikaJedan from "../assets/PrezentacijaSlikaJedan.jpg";
 import SlikaDva from "../assets/PrezentacijaSlikaDva.jpg";
 import SlikaTri from "../../src/assets/PrezentacijaSlikaTri.jpg";
@@ -13,10 +13,10 @@ function Portfolio() {
           <p>Prezentacija</p>
         </div>
         <div className="item-centering-container">
-          <PortfolioPicture right="0">
+          <PrezentacijaPicture right="0">
             <img src={SlikaJedan} alt="" />
-          </PortfolioPicture>
-          <PortfolioItemDescription left="0">
+          </PrezentacijaPicture>
+          <PrezentacijaItemDescription left="0">
             <p className="item-title">Uvod</p>
             <p className="item-description">
               Kada je krenula serijska proizvodnja automobila niko se nije
@@ -48,10 +48,10 @@ function Portfolio() {
                 Github
               </a>
             </div>
-          </PortfolioItemDescription>
+          </PrezentacijaItemDescription>
         </div>
         <div className="item-centering-container">
-          <PortfolioItemDescription right="0">
+          <PrezentacijaItemDescription right="0">
             <p className="item-title">Otpor vazduha</p>
             <p className="item-description">
               Otpor vazduha-sila koja se suprotstavlja kretanju objekta kroz
@@ -72,16 +72,16 @@ function Portfolio() {
                 Github
               </a>
             </div>
-          </PortfolioItemDescription>
-          <PortfolioPicture left="0">
+          </PrezentacijaItemDescription>
+          <PrezentacijaPicture left="0">
             <img src={SlikaDva} alt="" />
-          </PortfolioPicture>
+          </PrezentacijaPicture>
         </div>
         <div className="item-centering-container">
-          <PortfolioPicture right="0">
+          <PrezentacijaPicture right="0">
             <img src={SlikaTri} alt="" />
-          </PortfolioPicture>
-          <PortfolioItemDescription left="0">
+          </PrezentacijaPicture>
+          <PrezentacijaItemDescription left="0">
             <p className="item-title">Uzgon i potisna sila</p>
             <p className="item-description">
               Uzgon I potisna sila-deluje vertikalno gore/dole na vozilo. Ideja
@@ -113,7 +113,7 @@ function Portfolio() {
                 Github
               </a>
             </div>
-          </PortfolioItemDescription>
+          </PrezentacijaItemDescription>
         </div>
       </div>
     </PrezentacijaStyle>

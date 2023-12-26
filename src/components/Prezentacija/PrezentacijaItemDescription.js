@@ -1,14 +1,14 @@
-import { PortfolioItemDescriptionStyle } from "../../styles/PortfolioItemDescriptionStyle";
+import { PrezentacijaItemDescriptionStyle } from "../../styles/PrezentacijaItemDescriptionStyle";
 
 function PortfolioItemDescription(props) {
   return (
-    <PortfolioItemDescriptionStyle
+    <PrezentacijaItemDescriptionStyle
       left={props.left}
       right={props.right}
       className={props.className}
     >
       {props.children}
-    </PortfolioItemDescriptionStyle>
+    </PrezentacijaItemDescriptionStyle>
   );
 }
 

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const PortfolioPictureStyle = styled.div`
+const PrezentacijaPictureStyle = styled.div`
   width: 70%;
   height: 75%;
   outline: 3px rgba(0, 0, 0, 0.2) solid;
@@ -32,4 +32,4 @@ const PortfolioPictureStyle = styled.div`
   }
 `;
 
-export { PortfolioPictureStyle };
+export { PrezentacijaPictureStyle };

@@ -1,14 +1,14 @@
-import { PortfolioPictureStyle } from "../../styles/PortfolioPictureStyle";
+import { PrezentacijaPictureStyle } from "../../styles/PrezentacijaPictureStyle";
 
 function PortfolioPicture(props) {
   return (
-    <PortfolioPictureStyle
+    <PrezentacijaPictureStyle
       left={props.left}
       right={props.right}
       className={props.className}
     >
       {props.children}
-    </PortfolioPictureStyle>
+    </PrezentacijaPictureStyle>
   );
 }
 
