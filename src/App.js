@@ -8,10 +8,12 @@ import About from "./pages/About";
 import PrezentacijaSlider from "./pages/PrezentacijaSlider";
 import { useState } from "react";
 import { MathJaxContext } from "better-react-mathjax";
-import CalculatorPage from "./pages/CalculatorPage"
+import CalculatorPage from "./pages/CalculatorPage";
+import PrezentacijaItemZoom from "./components/Prezentacija/PrezentacijaItemZoom";
 
 function App() {
   const [isContactOpen, setIsContactOpen] = useState(false);
+  const [zoom, setZoom] = useState(false);
 
   return (
     <>
@@ -31,6 +33,8 @@ function App() {
                     <Home
                       isContactOpen={isContactOpen}
                       setIsContactOpen={setIsContactOpen}
+                      zoom={zoom}
+                      setZoom={setZoom}
                     />
                   }
                 />
@@ -62,7 +66,7 @@ function App() {
                   }
                 />
                 <Route
-                  path="/portfolio-slider"
+                  path="/prezentacija-slider"
                   element={
                     <PrezentacijaSlider
                       setIsContactOpen={setIsContactOpen}
@@ -72,6 +76,7 @@ function App() {
                 />
               </Routes>
             </BrowserRouter>
+            {zoom ? <PrezentacijaItemZoom></PrezentacijaItemZoom> : ""}
           </MainDiv>
         </ContactModalProvider>
       </MathJaxContext>

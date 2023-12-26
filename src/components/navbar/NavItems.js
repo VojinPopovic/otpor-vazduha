@@ -47,7 +47,7 @@ function NavItems({
         Kalkulator
       </Link>
       <Link
-        to="/portfolio-slider"
+        to="/prezentacija-slider"
         className={activeTab === "tab-slider" ? "active" : ""}
         onClick={() => handleTabClick("tab-slider")}
       >

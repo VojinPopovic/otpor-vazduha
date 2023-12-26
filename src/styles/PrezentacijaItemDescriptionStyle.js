@@ -22,7 +22,7 @@ const PrezentacijaItemDescriptionStyle = styled.div`
     display: flex;
     max-height: 40px;
     gap: 10px;
-    & a {
+    & div {
       min-width: 100px;
       padding-inline: 5%;
       padding-block: 2%;
