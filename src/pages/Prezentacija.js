@@ -1,11 +1,14 @@
 import { PrezentacijaStyle } from "../styles/PrezentacijaStyle";
 import PrezentacijaItemDescription from "../components/Prezentacija/PrezentacijaItemDescription";
 import PrezentacijaPicture from "../components/Prezentacija/PrezentacijaPicture";
-import SlikaJedan from "../assets/PrezentacijaSlikaJedan.jpg";
-import SlikaDva from "../assets/PrezentacijaSlikaDva.jpg";
-import SlikaTri from "../../src/assets/PrezentacijaSlikaTri.jpg";
+import dataObject from "../resources/data";
 
-function Prezentacija({ setZoom }) {
+function Prezentacija({ setZoom, setId }) {
+  function zoomItem(e) {
+    setZoom(true);
+    setId(e.target.className.split(" ")[1]);
+  }
+
   return (
     <>
       <PrezentacijaStyle>
@@ -15,29 +18,13 @@ function Prezentacija({ setZoom }) {
           </div>
           <div className="item-centering-container">
             <PrezentacijaPicture right="0">
-              <img src={SlikaJedan} alt="" />
+              <img src={dataObject.firstItem.Image} alt="" />
             </PrezentacijaPicture>
             <PrezentacijaItemDescription left="0">
               <p className="item-title">Uvod</p>
-              <p className="item-description">
-                Kada je krenula serijska proizvodnja automobila niko se nije
-                brinuo o aerodinamici I o tome kako ona moze uticati na
-                performanse I na ekonomicnost. Kako je vreme prolazilo ljudi su
-                hteli brze automobile, a da bi to postigli koristili su jace
-                motore, medjutim, ubrzo su shvatili da stvar nije toliko
-                jednostavna. Primetili su da se pri vecim brzinama stvaraju
-                sumovi koji su cinili voznju neprijatnom, kao I da je potrosnja
-                postala goriva postala mnogo veca. U to vreme je doslo I do
-                procvata industrije aviona koja je imala iste probleme I tada su
-                inzenjeri krenuli da razmisljaju o aerodinamici. prvi automobil
-                koji je napravio prekretnicu je bio Saab 92, za kog su inzenjeri
-                prvi put koristili aerotunel za testiranje automobile. On je
-                mogao voziti brze uz manju potrosnju, bez upotrebe vecih motora.
-                Nakon toga su aerotuneli krenuli da se koriste u auto
-                industriji.
-              </p>
+              <p className="item-description">{dataObject.firstItem.textOne}</p>
               <div className="item-buttons">
-                <div onClick={() => setZoom(true)} className="pill-button">
+                <div onClick={zoomItem} className="pill-button firstItem">
                   Povecaj
                 </div>
               </div>
@@ -47,50 +34,38 @@ function Prezentacija({ setZoom }) {
             <PrezentacijaItemDescription right="0">
               <p className="item-title">Otpor vazduha</p>
               <p className="item-description">
-                Otpor vazduha-sila koja se suprotstavlja kretanju objekta kroz
-                vazduh, on zavisi od nekoliko faktora, kao sto su oblik I
-                velicina vozila, brzine kretanja, gustine I viskoznosti. On ima
-                veliki uticaj na performanse I ekonomicnost. Auotomobili se
-                projektuju tako da se ova velicina ima sto manju vrednost.
+                {dataObject.secondItem.textOne}
                 <br />
                 <br />
-                Koeficijent otpora - koristi se da kvantifikuje vrednost
-                aerodinamickog otpora koje vozilo generise tokom kretanja
+                {dataObject.secondItem.textTwo}
               </p>
               <div className="item-buttons">
-                <div onClick={() => setZoom(true)} className="pill-button">
+                <div onClick={zoomItem} className="pill-button secondItem">
                   Povecaj
                 </div>
               </div>
             </PrezentacijaItemDescription>
             <PrezentacijaPicture left="0">
-              <img src={SlikaDva} alt="" />
+              <img src={dataObject.secondItem.Image} alt="" />
             </PrezentacijaPicture>
           </div>
           <div className="item-centering-container">
             <PrezentacijaPicture right="0">
-              <img src={SlikaTri} alt="" />
+              <img src={dataObject.thirdItem.Image} alt="" />
             </PrezentacijaPicture>
             <PrezentacijaItemDescription left="0">
               <p className="item-title">Uzgon i potisna sila</p>
               <p className="item-description">
-                Uzgon I potisna sila-deluje vertikalno gore/dole na vozilo.
-                Ideja je da se uzgon smanji a potisak poveca sto vise. Pri vecim
-                brzinama uzgon moze da znatno da smanji upravljivost I
-                stabilnost vozila pri vecim brzinama, dok potisna sila tezi da
-                vozilo drzi “zalepljenim” za podlogu
+                {dataObject.thirdItem.textOne}
                 <br />
                 <br />
-                Spojleri - montiraju se na vozila kako bi modifikovali protok
-                vazduha preko I oko vozila, koriste se za povecanje potisne sile
-                I smanjenje aerodinamickog otpora
+                {dataObject.thirdItem.textTwo}
                 <br />
                 <br />
-                Kanardi - montiraju se na prednji deo vozila I imaju istu
-                funkciju kao spojleri
+                {dataObject.thirdItem.textThree}
               </p>
               <div className="item-buttons">
-                <div onClick={() => setZoom(true)} className="pill-button">
+                <div onClick={zoomItem} className="pill-button thirdItem">
                   Povecaj
                 </div>
               </div>

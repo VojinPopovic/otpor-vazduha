@@ -14,6 +14,7 @@ import PrezentacijaItemZoom from "./components/Prezentacija/PrezentacijaItemZoom
 function App() {
   const [isContactOpen, setIsContactOpen] = useState(false);
   const [zoom, setZoom] = useState(false);
+  const [id, setId] = useState();
 
   return (
     <>
@@ -35,6 +36,7 @@ function App() {
                       setIsContactOpen={setIsContactOpen}
                       zoom={zoom}
                       setZoom={setZoom}
+                      setId={setId}
                     />
                   }
                 />
@@ -76,7 +78,7 @@ function App() {
                 />
               </Routes>
             </BrowserRouter>
-            {zoom ? <PrezentacijaItemZoom></PrezentacijaItemZoom> : ""}
+            {zoom ? <PrezentacijaItemZoom id={id}></PrezentacijaItemZoom> : ""}
           </MainDiv>
         </ContactModalProvider>
       </MathJaxContext>

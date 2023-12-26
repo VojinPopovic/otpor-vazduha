@@ -67,7 +67,7 @@ function Home(props) {
             <ArrowDownGraphic className="arrow-down"></ArrowDownGraphic>
           </a>
         </HomeStyle>
-        <Prezentacija zoom={props.zoom} setZoom={props.setZoom}></Prezentacija>
+        <Prezentacija zoom={props.zoom} setZoom={props.setZoom} setId={props.setId}></Prezentacija>
         <FooterMain></FooterMain>
         <Contact
           setIsContactOpen={props.setIsContactOpen}

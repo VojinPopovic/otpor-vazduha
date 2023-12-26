@@ -51,7 +51,7 @@ function NavItems({
         className={activeTab === "tab-slider" ? "active" : ""}
         onClick={() => handleTabClick("tab-slider")}
       >
-        Portfolio
+        Galerija
       </Link>
       <Link
         to="/about"
