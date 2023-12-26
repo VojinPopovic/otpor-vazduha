@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const PortfolioStyle = styled.div`
+const PrezentacijaStyle = styled.div`
   width: 100%;
   height: auto;
   display: flex;
@@ -64,4 +64,4 @@ const PortfolioStyle = styled.div`
   }
 `;
 
-export { PortfolioStyle };
+export { PrezentacijaStyle };

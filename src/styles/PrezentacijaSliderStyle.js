@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const PortfolioSliderStyle = styled.div`
+const PrezentacijaSliderStyle = styled.div`
   position: relative;
   height: 100vh;
   width: 100%;
@@ -92,4 +92,4 @@ const PortfolioSliderStyle = styled.div`
   }
 `;
 
-export { PortfolioSliderStyle };
+export { PrezentacijaSliderStyle };

@@ -1,4 +1,4 @@
-import { PortfolioSliderStyle } from "../styles/PortfolioSliderStyle";
+import { PrezentacijaSliderStyle } from "../styles/PrezentacijaSliderStyle";
 import { useEffect } from "react";
 import TravelShare from "../assets/travelShareImage.png";
 import PortfolioWebsiteImage from "../assets/portfolioWebsiteImage.png";
@@ -78,7 +78,7 @@ export default function PortfolioSlider(props) {
       transition={{ duration: 0.6, ease: "easeInOut" }}
       exit={{ opacity: 1 }}
     >
-      <PortfolioSliderStyle>
+      <PrezentacijaSliderStyle>
         <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
           <p className="double-click">
             Double <span>click</span> to go to the Live Demo
@@ -113,7 +113,7 @@ export default function PortfolioSlider(props) {
             onDoubleClick={() => (window.location.href = "https://popular-movie-catalogue.vercel.app/")}
           />
         </div>
-      </PortfolioSliderStyle>
+      </PrezentacijaSliderStyle>
       <Contact
         setIsContactOpen={props.setIsContactOpen}
         isContactOpen={props.isContactOpen}

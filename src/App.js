@@ -5,7 +5,7 @@ import NavMain from "./components/navbar/NavMain";
 import { ContactModalProvider } from "./contexts/ContactModalContext";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from "./pages/About";
-import PortfolioSlider from "./pages/PortfolioSlider";
+import PrezentacijaSlider from "./pages/PrezentacijaSlider";
 import { useState } from "react";
 import { MathJaxContext } from "better-react-mathjax";
 import CalculatorPage from "./pages/CalculatorPage"
@@ -64,7 +64,7 @@ function App() {
                 <Route
                   path="/portfolio-slider"
                   element={
-                    <PortfolioSlider
+                    <PrezentacijaSlider
                       setIsContactOpen={setIsContactOpen}
                       isContactOpen={isContactOpen}
                     />
