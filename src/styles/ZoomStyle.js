@@ -9,14 +9,29 @@ const ZoomStyle = styled.div`
   left: 0;
   width: 100%;
   height: 100vh;
-  background: pink; 
-  z-index: 999; 
-  & .content-holder{
+  background: white;
+  z-index: 999;
+  & .content-holder {
     width: 60%;
-    height: 90%;
+    height: auto;
     max-width: 600px;
-    max-height: 700px;
-    background-color: black;
+    background-color: red;
+    border-radius: 20px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    & img {
+      width: 100%;
+    }
+    & p {
+      color: white;
+      margin: 20px 20px;
+    }
+    & button {
+      margin-top: 10px;
+      padding: 8px 20px;
+      background-color: white;
+      margin-left: 20px;
+    }
   }
 `;
 

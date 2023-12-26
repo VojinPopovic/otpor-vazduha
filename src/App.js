@@ -78,7 +78,14 @@ function App() {
                 />
               </Routes>
             </BrowserRouter>
-            {zoom ? <PrezentacijaItemZoom id={id}></PrezentacijaItemZoom> : ""}
+            {zoom ? (
+              <PrezentacijaItemZoom
+                id={id}
+                setZoom={setZoom}
+              ></PrezentacijaItemZoom>
+            ) : (
+              ""
+            )}
           </MainDiv>
         </ContactModalProvider>
       </MathJaxContext>
