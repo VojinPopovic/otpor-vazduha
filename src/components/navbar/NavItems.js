@@ -53,13 +53,6 @@ function NavItems({
       >
         Galerija
       </Link>
-      <Link
-        to="/about"
-        className={activeTab === "tab-about" ? "active" : ""}
-        onClick={() => handleTabClick("tab-about")}
-      >
-        About me
-      </Link>
       <li
         onClick={() => {
           setIsContactOpen(true);

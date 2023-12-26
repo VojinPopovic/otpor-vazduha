@@ -1,11 +1,8 @@
 import { PrezentacijaSliderStyle } from "../styles/PrezentacijaSliderStyle";
 import { useEffect } from "react";
-import TravelShare from "../assets/travelShareImage.png";
-import PortfolioWebsiteImage from "../assets/portfolioWebsiteImage.png";
 import Contact from "./Contact";
 import ArrowLeftIcon from "../assets/arrowLeftIcon.svg";
 import { motion } from "framer-motion";
-import MovieCatalogueImage from "../../src/assets/movieCatalogueImage.png";
 
 export default function PortfolioSlider(props) {
   useEffect(() => {
