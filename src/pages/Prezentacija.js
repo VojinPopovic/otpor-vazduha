@@ -5,8 +5,10 @@ import dataObject from "../resources/data";
 
 function Prezentacija({ setZoom, setId }) {
   function zoomItem(e) {
-    setZoom(true);
-    setId(e.target.className.split(" ")[1]);
+    if (setId && setZoom !== undefined) {
+      setId(e.target.className.split(" ")[1]);
+      setZoom(true);
+    } else { console.log("osdsf")}
   }
 
   return (

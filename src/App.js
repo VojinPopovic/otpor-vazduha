@@ -45,6 +45,9 @@ function App() {
                     <Home
                       isContactOpen={isContactOpen}
                       setIsContactOpen={setIsContactOpen}
+                      setZoom={setZoom}
+                      setId={setId}
+                      zoom={zoom}
                     />
                   }
                 />
@@ -68,12 +71,12 @@ function App() {
                 />
               </Routes>
             </BrowserRouter>
-            <PrezentacijaItemZoom
-              id={id}
-              setZoom={setZoom}
-              zoom={zoom}
-            ></PrezentacijaItemZoom>
           </MainDiv>
+          <PrezentacijaItemZoom
+            id={id}
+            setZoom={setZoom}
+            zoom={zoom}
+          ></PrezentacijaItemZoom>
         </ContactModalProvider>
       </MathJaxContext>
     </>
