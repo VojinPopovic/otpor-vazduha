@@ -12,7 +12,7 @@ import PrezentacijaItemZoom from "./components/Prezentacija/PrezentacijaItemZoom
 
 function App() {
   const [isContactOpen, setIsContactOpen] = useState(false);
-  const [zoom, setZoom] = useState();
+  const [zoom, setZoom] = useState(false);
   const [id, setId] = useState("firstItem");
 
   return (
