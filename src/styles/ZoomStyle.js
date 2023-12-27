@@ -12,10 +12,10 @@ const ZoomStyle = styled.div`
   background: white;
   z-index: 999;
   & .content-holder {
-    width: 60%;
+    width: 80%;
     height: auto;
     max-width: 600px;
-    background-color: red;
+    background-color: #da3636;
     border-radius: 20px;
     overflow: hidden;
     padding-bottom: 20px;
